@@ -1,7 +1,8 @@
 #ifndef SORT_H
 #define SORT_H
 
-#include <stddef.h>  /* Include necessary standard header for size_t */
+#include <stdio.h>
+#include <stdlib.h>
 
 /* Comparison direction macros for bitonic sort */
 #define UP 0
@@ -14,8 +15,8 @@
  */
 typedef enum bool
 {
-    false = 0,
-    true
+	false = 0,
+	true
 } bool;
 
 /**
@@ -27,16 +28,16 @@ typedef enum bool
  */
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 /* Printing helper functions */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
-/* Sorting algorithms */
+/* Sorting algoritms */
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
